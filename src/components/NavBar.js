@@ -1,4 +1,5 @@
 import React from 'react'
+import CartWidget from './CartWidget'
 
 
 const NavBar = () => {
@@ -10,23 +11,22 @@ const NavBar = () => {
     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
 </svg>
-      <span class="ml-3 text-xl">Planes</span>
+      <span class="ml-3 text-xl" >Planes</span>
     </a>
     <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-      <a class="mr-5 hover:text-gray-900">Our fleet</a>
-      <a class="mr-5 hover:text-gray-900">Courses</a>
-      <a class="mr-5 hover:text-gray-900">Our staff</a>
-      <a class="mr-5 hover:text-gray-900">Shop</a>
+      <a class="mr-5 hover:text-gray-900" href=''>Our fleet</a>
+      <a class="mr-5 hover:text-gray-900" href=''>Courses</a>
+      <a class="mr-5 hover:text-gray-900" href=''>Our staff</a>
+      <a class="mr-5 hover:text-gray-900" href=''>Shop</a>
     </nav>
-    <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
-      <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7"></path>
-      </svg>
-    </button>
+    <CartWidget></CartWidget>
   </div>
+
 </header>
 
   )
 }
 
 export default NavBar
+
+
