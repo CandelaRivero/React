@@ -20,11 +20,13 @@ const ComponenteEstado = () => {
   return (
 
     <>
-    <div >ComponenteEstado</div>
+    <div className='text-right	'>
+    <div>ComponenteEstado</div>
     Total : {contador}
     <br></br>
     <button onClick={restarHandler}>-</button>
     <button onClick={sumarHandler}>+</button>
+    </div>
 
 
     

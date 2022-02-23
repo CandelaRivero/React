@@ -6,10 +6,10 @@ const ItemList = () => {
 
   
     const  productos = [
-      {id:'1' , name:'Cessna 152' , description: '$1500', stock:'5'},
-      {id:'2' , name:'Cessna 172' , description: '$3000', stock: '8'},
-      {id:'3' , name:'Piper Seneca ' , description: '$6000', stock: '7'},
-      {id:'4' , name:'Cirrus' , description: '$9000', stock: '9'}
+      {id:'1' , name:'Cessna 152' , precio: '$1500', stock:'5'},
+      {id:'2' , name:'Cessna 172' , precio: '$3000', stock: '8'},
+      {id:'3' , name:'Piper Seneca ' , precio: '$6000', stock: '7'},
+      {id:'4' , name:'Cirrus' , precio: '$9000', stock: '9'}
      ]
     
     
@@ -45,7 +45,7 @@ const ItemList = () => {
         
         <div>ItemList</div>
     
-        {productos.map (producto => <li key={producto.id}>{producto.name} - Stock:  {producto.stock} Precio: {producto.description} </li> )}
+        {productos.map (producto => <li key={producto.id}>{producto.name} - Stock:  {producto.stock} Precio: {producto.precio} </li> )}
         
   
     </>

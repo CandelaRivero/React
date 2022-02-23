@@ -16,21 +16,18 @@ function App() {
 
  
 
-const alertMsg = () => { alert ("Hola") }
+
 
   return (
     <>
     
     <NavBar></NavBar>
-    <ComponenteEstado></ComponenteEstado>
+    <ComponenteEstado ></ComponenteEstado>
     <ItemListContainer></ItemListContainer>
     <div className="App">
     
    
-      <Footer name="Juana" action={alertMsg}> 
       
-      
-      </Footer>
 
       <Cursos></Cursos>
     </div>
@@ -49,3 +46,8 @@ export default App;
   <li>JSX</li>
   <li>Webpack</li>
 </ul> */
+
+
+/*<Footer name="Juana" action={alertMsg}>  </Footer>
+
+const alertMsg = () => { alert ("Hola") } */
