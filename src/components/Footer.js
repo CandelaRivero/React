@@ -22,11 +22,7 @@ const styles = {
 
       <>
       
-         {children.map ( e =>
-          <div>{e}</div>
-          )} 
-        <span>este es mi pie de pagina</span>
-        <div>Espero que te haya gustado mi sitio {name}</div>
+        
         <button className={styles.button} onClick={action} >Dale click aqui</button> 
         
         
