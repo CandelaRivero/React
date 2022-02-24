@@ -9,6 +9,8 @@ const Item = ({producto}) => {
    
         <h3>{producto.nombre}</h3>
         <h4>{producto.precio}</h4>
+
+        
     </div>
     
     

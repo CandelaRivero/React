@@ -5,6 +5,8 @@ import NavBar from './components/NavBar';
 import ItemListContainer from "./container/ItemListContainer";
 import ComponenteEstado from "./class4/ComponenteEstado";
 import Cursos from "./container/Cursos";
+import Cessna172 from './Cessna172.svg'
+
 
 function App() {
 
@@ -15,9 +17,6 @@ function App() {
  // }
 
  
-
-
-
   return (
     <>
     
