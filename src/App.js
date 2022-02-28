@@ -5,8 +5,8 @@ import NavBar from './components/NavBar';
 import ItemListContainer from "./container/ItemListContainer";
 import ComponenteEstado from "./class4/ComponenteEstado";
 import Cursos from "./container/Cursos";
-import Cessna172 from './Cessna172.svg'
-
+// import Cessna172 from './Cessna172.svg'
+import SpeciesList from './components/planes/SpeciesList';
 
 function App() {
 
@@ -25,10 +25,8 @@ function App() {
     <ItemListContainer></ItemListContainer>
     <div className="App">
     
-   
-      
-
       <Cursos></Cursos>
+      <SpeciesList></SpeciesList>
     </div>
     </>
 
