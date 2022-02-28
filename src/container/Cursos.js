@@ -16,8 +16,8 @@ const Cursos = ( {nombre}) => {
 
   return (
     <>
-    <div className="text-3xl font-bold underline">Cursos y programas</div>
-    <div className={estilos.nombre} style={{border: "solid blue"}} >
+    {console.log('Cursos:')}
+    <div className={estilos.nombre} >
         <Cursos2 cursos={cursos[0]}></Cursos2>
         <Cursos2 cursos={cursos[1]}></Cursos2>
         <Cursos2 cursos={cursos[2]}></Cursos2>
@@ -30,7 +30,7 @@ const Cursos = ( {nombre}) => {
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
       <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Cursos y Programas</h1>
-      <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Choosa the one that suits you better</p>
+      <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Choose the one that suits you better</p>
       <div className="flex mx-auto border-2 border-blue-500 rounded overflow-hidden mt-6">
         <button className="py-1 px-4 bg-blue-500 text-white focus:outline-none">Monthly</button>
         <button className="py-1 px-4 focus:outline-none">Annually</button>
