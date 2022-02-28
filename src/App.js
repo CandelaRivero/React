@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
 import ItemListContainer from "./container/ItemListContainer";
-import ComponenteEstado from "./class4/ComponenteEstado";
+import ComponenteEstado from "./components/ComponenteEstado";
 import Cursos from "./container/Cursos";
 // import Cessna172 from './Cessna172.svg'
 import SpeciesList from './components/planes/SpeciesList';
@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import CharList from './components/videogame/CharList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CharDetailContainer from './components/videogame/CharDetailContainer';
-import Home from './components/videogame/Home';
+import HeroHome from './components/videogame/HeroHome';
 
 function App() {
 
@@ -29,7 +29,7 @@ function App() {
       <BrowserRouter>
       <NavBar></NavBar>
       <Routes>
-        <Route index element={<Home/>}></Route> 
+        <Route index element={<HeroHome/>}></Route> 
 
         <Route path='lista' element={<CharList/>}></Route> 
         <Route path='personaje'>

@@ -29,7 +29,7 @@ const Cursos = ( {nombre}) => {
     <section className="text-gray-600 body-font overflow-hidden">
   <div className="container px-5 py-24 mx-auto">
     <div className="flex flex-col text-center w-full mb-20">
-      <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Cursos y Programas</h1>
+      <h1 className="sm:text-4xl text-3xl font-medium title-font mb-2 text-gray-900">Courses and programs</h1>
       <p className="lg:w-2/3 mx-auto leading-relaxed text-base text-gray-500">Choose the one that suits you better</p>
       <div className="flex mx-auto border-2 border-blue-500 rounded overflow-hidden mt-6">
         <button className="py-1 px-4 bg-blue-500 text-white focus:outline-none">Monthly</button>
