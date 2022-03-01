@@ -4,13 +4,13 @@ import NavBar from './components/NavBar';
 import ItemListContainer from "./container/ItemListContainer";
 import ComponenteEstado from "./components/ComponenteEstado";
 import Cursos from "./container/Cursos";
-// import Cessna172 from './Cessna172.svg'
 import SpeciesList from './components/planes/SpeciesList';
 import Footer from './components/Footer';
 import CharList from './components/videogame/CharList';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import CharDetailContainer from './components/videogame/CharDetailContainer';
 import HeroHome from './components/videogame/HeroHome';
+import ItemDetailContainer from './container/ItemDetailContainer';
 
 function App() {
 
@@ -37,8 +37,9 @@ function App() {
         </Route>
 
         <Route path='contador' element={<ComponenteEstado/>}></Route>
-        <Route path='cards' element={<ItemListContainer/>}></Route>
+       <Route path='cards' element={<ItemListContainer/>}></Route>
         <Route path='cursos' element={<Cursos/>}></Route>
+
 
 
 
@@ -47,7 +48,7 @@ function App() {
    
     
     
-    
+   <ItemDetailContainer></ItemDetailContainer>
     <SpeciesList></SpeciesList>
     <Footer></Footer>
     </div>

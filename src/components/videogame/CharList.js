@@ -1,6 +1,6 @@
-import { data } from 'autoprefixer'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import CharListCard from './CharListCard'
+
 
 
 const charsList = [
@@ -23,7 +23,7 @@ const CharList = () => {
          const getCharsPromise = new Promise ((resolve, reject) => {
              setTimeout(()=> {
                 resolve(charsList)
-             }, 3000);
+             }, 2000);
          })
 
          getCharsPromise.then(

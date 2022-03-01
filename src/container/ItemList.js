@@ -43,9 +43,11 @@ const ItemList = () => {
     
         <>
         
-        <div>ItemList</div>
-    
+        <div>ItemList
         {productos.map (producto => <li key={producto.id}>{producto.name} - Stock:  {producto.stock} Precio: {producto.precio} </li> )}
+        </div>
+    
+       
         
   
     </>
