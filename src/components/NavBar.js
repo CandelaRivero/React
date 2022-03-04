@@ -21,7 +21,7 @@ const NavBar = () => {
       <Link className="ml-3 text-xl" to='/'>Planes</Link>
     </a>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-    <Link className="mr-5 hover:text-gray-900" href='' to='cards'>Our fleet</Link>
+    <Link className="mr-5 hover:text-gray-900" href='' to='categoria'>Our fleet</Link>
     <Link className="mr-5 hover:text-gray-900" href=''to='cursos'>Courses</Link>
     <Link className="mr-5 hover:text-gray-900" href='' to='lista'>Our staff</Link>
     <Link className="mr-5 hover:text-gray-900" href='' to='/'>Shop</Link>

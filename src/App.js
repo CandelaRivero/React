@@ -7,7 +7,7 @@ import Cursos from "./container/Cursos";
 import SpeciesList from './components/planes/SpeciesList';
 import Footer from './components/Footer';
 import CharList from './components/videogame/CharList';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import CharDetailContainer from './components/videogame/CharDetailContainer';
 import HeroHome from './components/videogame/HeroHome';
 import ItemDetailContainer from './container/ItemDetailContainer';
@@ -28,6 +28,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <NavBar></NavBar>
+
       <Routes>
         <Route index element={<HeroHome/>}></Route> 
 
@@ -36,8 +37,15 @@ function App() {
           <Route path=':charId' element={<CharDetailContainer/>}></Route>
         </Route>
 
+        
+            <Route path='categoria' element={<ItemListContainer/>}>
+              <Route path=':category' element={<ItemListContainer/>}></Route>
+            </Route>
+
+
+
         <Route path='contador' element={<ComponenteEstado/>}></Route>
-       <Route path='cards' element={<ItemListContainer/>}></Route>
+       
         <Route path='cursos' element={<Cursos/>}></Route>
 
 
@@ -48,7 +56,7 @@ function App() {
    
     
     
-   <ItemDetailContainer></ItemDetailContainer>
+   
     <SpeciesList></SpeciesList>
     <Footer></Footer>
     </div>

@@ -1,40 +1,42 @@
 import {useEffect , useState} from 'react'
+import ItemCard from './ItemCard'
 
-const ItemList = () => {
+
+const ItemList = ({category}) => {
  
-   
+  
+  
 
   
     const  productos = [
-      {id:'1' , name:'Cessna 152' , precio: '$1500', stock:'5'},
-      {id:'2' , name:'Cessna 172' , precio: '$3000', stock: '8'},
-      {id:'3' , name:'Piper Seneca ' , precio: '$6000', stock: '7'},
-      {id:'4' , name:'Cirrus' , precio: '$9000', stock: '9'}
+      {id:'1' , name:'Cessna 152' , precio: '$1500', stock:'5', categoria: 'cessna'},
+      {id:'2' , name:'Cessna 172' , precio: '$3000', stock: '8', categoria: 'cessna'},
+      {id:'3' , name:'Piper Seneca ' , precio: '$6000', stock: '7', categoria: 'other'},
+      {id:'4' , name:'Cirrus' , precio: '$9000', stock: '9', categoria: 'other'}
      ]
     
-    
-    
-     useEffect ( () => {
-      getProducts ()
-      console.log ('se ejecuto el efecto');
-      return () => {
-          console.log ('Limpieza al unmount');
-      } 
-    }, [] )
-    
-     
-    const getProducts = () => { 
-      const getProductsPromise = new Promise ( (resolve, reject)=> {
-        setTimeout(() => {
-          resolve (productos)
-        }, 3000);
-        
-      }) 
-    
-      getProductsPromise.then (response => {
-        console.log(response);
-      })
+   
+     const {products, setProducts} = useState([])
+     useEffect(() => {
+       getProducts()
+     }, [category])
+   
+     const getProducts = () => {
+       const prodPromise = new Promise ((res, rej) => {
+         res (productos)
+   
+       } )
+       prodPromise.then (data => {
+         if (category) {
+           setProducts (data)
+         } else {
+          setProducts (data.filter(p => p.categoria == category))
+         }
+
+       }
+        )
      }
+   
     
      
     
@@ -44,8 +46,15 @@ const ItemList = () => {
         <>
         
         <div>ItemList
-        {productos.map (producto => <li key={producto.id}>{producto.name} - Stock:  {producto.stock} Precio: {producto.precio} </li> )}
+         
+        
+        
+        {productos.map (p =>
+          <ItemCard key={p.id} item={p} />
+          )}
         </div>
+
+       
     
        
         
@@ -55,3 +64,27 @@ const ItemList = () => {
 }
 
 export default ItemList
+
+
+/*
+      const {products, setProducts} = useState([])
+  useEffect(() => {
+    getProducts()
+  }, [])
+
+  const getProducts = () => {
+    const prodPromise = new Promise ((res, rej) => {
+      res (productos)
+
+    } )
+    prodPromise.then (data => setProducts(data))
+  }
+
+
+     en el return  {products.map( p => 
+          <strong>{p.name}</strong>
+          )}
+        
+    */
+
+

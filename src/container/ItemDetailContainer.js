@@ -12,7 +12,7 @@ const ItemDetailContainer = () => {
 <main className="h-screen w-screen py-6  flex items-center justify-center flex-wrap">
       <div className="bg-white w-72 h-96 shadow-md rounded m-5 focus:outline-none">
         <div className="h-3/4 w-full">
-          <img className="w-full h-full object-cover rounded-t" src="https://res.cloudinary.com/dvyoczetf/image/upload/v1646007409/Cessna_152_hdh2ws.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="152"></img>
+          <img className="w-full h-full object-cover rounded-t" src="https://res.cloudinary.com/dvyoczetf/image/upload/v1646007409/Planes/Cessna_152_hdh2ws.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="152"></img>
         </div>
          <div className="w-full h-1/4 p-3">
           <a href="#" className="text-gray-700">
