@@ -11,6 +11,9 @@ import { BrowserRouter, Route, Router, Routes } from 'react-router-dom';
 import CharDetailContainer from './components/videogame/CharDetailContainer';
 import HeroHome from './components/videogame/HeroHome';
 import ItemDetailContainer from './container/ItemDetailContainer';
+import EventsHome from './components/events/EventsHome';
+import ContextosHome from './components/contextos/ContextosHome';
+import { CounterContextProvider } from './components/contextos/context/counterContext';
 
 function App() {
 
@@ -41,6 +44,9 @@ function App() {
             <Route path='categoria' element={<ItemListContainer/>}>
               <Route path=':category' element={<ItemListContainer/>}></Route>
             </Route>
+            <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+
+
 
 
 
@@ -58,7 +64,12 @@ function App() {
     
    
     <SpeciesList></SpeciesList>
+    <EventsHome></EventsHome>
     <Footer></Footer>
+    <CounterContextProvider>
+    <ContextosHome></ContextosHome>
+    </CounterContextProvider>
+
     </div>
     </>
 

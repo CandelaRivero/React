@@ -37,6 +37,7 @@ const Cards = () => {
           <p className="text-gray-600 text-sm leading-5 mt-1">$3000</p>
           <Link to='detalles' className='text-blue-500 hover:text-blue-600'>Detalles</Link>
         </div>
+        
       </div>
 
 

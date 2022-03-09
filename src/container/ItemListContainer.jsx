@@ -37,7 +37,10 @@ const ItemListContainer = ( ) => {
           <div className={estilos.nombre} style={{border: "solid red"}}>
          <ItemList category={category}>
          </ItemList>
+         
          <ItemDetailContainer></ItemDetailContainer>
+
+         
           </div>
 
 
