@@ -14,6 +14,8 @@ import ItemDetailContainer from './container/ItemDetailContainer';
 import EventsHome from './components/events/EventsHome';
 import ContextosHome from './components/contextos/ContextosHome';
 import { CounterContextProvider } from './components/contextos/context/counterContext';
+import Condicional from './components/rendercondicional/Condicional';
+import PlanesListContainer from './components/rendercondicional/PlanesListContainer';
 
 function App() {
 
@@ -66,9 +68,15 @@ function App() {
     <SpeciesList></SpeciesList>
     <EventsHome></EventsHome>
     <Footer></Footer>
+
+
     <CounterContextProvider>
     <ContextosHome></ContextosHome>
     </CounterContextProvider>
+
+    <Condicional></Condicional>
+
+    <PlanesListContainer></PlanesListContainer>
 
     </div>
     </>
