@@ -1,11 +1,11 @@
 import React from 'react'
 import { useContext } from 'react'
 
-import {CounterContext} from './context/counterContext'
+import {useCounter} from './context/counterContext'
 
 const CounterCard = () => {
 
-  const {count, addCounter} =  useContext(CounterContext)
+  const {count, addCounter} =  useCounter()
 
   return (
     <>

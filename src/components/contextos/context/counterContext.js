@@ -8,12 +8,15 @@ export const CounterContext = React.createContext( {
      } )
 
 
+    export const useCounter = () => { 
+     return  useContext(CounterContext)
+      }
      
 
  
 export const CounterContextProvider = ({children}) => {
 
-     const [counter, setCounter] = useState(777)
+     const [counter, setCounter] = useState(0)
 
     const addCounter = (num = 1) => { 
             setCounter(counter + num)

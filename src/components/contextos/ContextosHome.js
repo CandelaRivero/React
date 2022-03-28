@@ -1,12 +1,12 @@
 import React, { useContext, useState } from 'react'
 import CounterContainer from './CounterContainer'
-import {CounterContext} from './context/counterContext'
+import {useCounter} from './context/counterContext'
 
 const ContextosHome = () => {
 
    
     
-    const {count, addCounter, subtractCounter} =  useContext(CounterContext)
+    const {count, addCounter, subtractCounter} =  useCounter()
 
 
   return (

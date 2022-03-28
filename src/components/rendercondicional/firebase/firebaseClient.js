@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { getFirestore, collection, getDocs, query, where, getDoc, doc } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -19,6 +20,56 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
+ const db = getFirestore()
+ const productsCollection = collection(db, "products")
+
+export const getProducts = async () => { 
+
+   const querySnapshot = await getDocs(productsCollection);
+
+   let products = []
+      
+   querySnapshot.forEach( doc => { 
+       
+      // console.log(`${doc.id} => ${ JSON.stringify(doc.data())}`);
+      //  console.log(doc.data());
+       // products.push(doc.data())
+       products.push ({
+         id: doc.id, 
+         ...doc.data()
+   })
+   });
+
+   return products
+}
+
+export const getProductsByProp = async (prop, value) => { 
+  const q =  query (productsCollection, where(prop, "==", value)); 
+  const querySnapshot = await getDocs(q);
+  let products = []
+
+  querySnapshot.forEach((doc) => {
+    products.push(doc.data())
+  });
+  return products
+}
+
+export const getProductById = async (id) => {
+  const docRef = doc(productsCollection, id);
+  const docSnap = await getDoc (docRef);
+
+  return docSnap.data()
+}
+
+// export const getProductsById = async () => { 
+
+//   const querySnapshot = await getDocs(collection(db,"products"));
+
+
+//   return 
+// }
+
+
 const analytics = getAnalytics(app);
 
 // export const getFirebase = () => {return app}
