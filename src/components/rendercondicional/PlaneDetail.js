@@ -31,8 +31,12 @@ const PlaneDetail = () => {
     <>
      <div>
          <h1>{plane.name}</h1>
-         <h1>{plane.price}</h1>
-         <h1>{plane.stock}</h1>
+         <h1>${plane.price}</h1>
+         <h1>{plane.desc1}</h1>
+         <h1>{plane.desc2}</h1>
+         <h1>{plane.desc3}</h1>
+
+         
      </div>
     </>
    )

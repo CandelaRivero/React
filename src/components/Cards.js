@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import PlanesHome from './rendercondicional/PlanesHome'
 // import Cessna172 from './Cessna172.svg'
 
 const Cards = () => {
   return (
     
-
+<>
 
     <main className="h-screen w-screen py-6  flex items-center justify-center flex-wrap">
       <div className="bg-white w-72 h-96 shadow-md rounded m-3 focus:outline-none hover:bg-gray-200">
@@ -70,6 +71,8 @@ const Cards = () => {
         </div>
       </div>
       </main>
+
+     </> 
 
   )
 }

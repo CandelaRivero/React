@@ -18,6 +18,7 @@ import Condicional from './components/rendercondicional/Condicional';
 import PlanesListContainer from './components/rendercondicional/PlanesListContainer';
 import CounterContainer from './components/contextos/CounterContainer';
 import PlanesHome from './components/rendercondicional/PlanesHome';
+import ShoppingCart from './components/ShoppingCart';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
       <BrowserRouter>
       <NavBar></NavBar>
 
+
       <Routes>
         <Route index element={<HeroHome/>}></Route> 
 
@@ -48,8 +50,11 @@ function App() {
         
             <Route path='categoria' element={<ItemListContainer/>}>
               <Route path=':category' element={<ItemListContainer/>}></Route>
+              
             </Route>
+           
             <Route exact path='/item/:id' element={<ItemDetailContainer/>}/>
+            
 
 
 
@@ -68,8 +73,8 @@ function App() {
     
     
    
-    <SpeciesList></SpeciesList>
-    <EventsHome></EventsHome>
+    {/* <SpeciesList></SpeciesList>
+    <EventsHome></EventsHome> */}
     <Footer></Footer>
 
 {/* 

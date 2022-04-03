@@ -1,6 +1,7 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import {Link} from "react-router-dom"
+import ShoppingCart from './ShoppingCart'
 
 
 const NavBar = () => {
@@ -24,10 +25,11 @@ const NavBar = () => {
     <Link className="mr-5 hover:text-gray-900" href='' to='categoria'>Our fleet</Link>
     <Link className="mr-5 hover:text-gray-900" href=''to='cursos'>Courses</Link>
     <Link className="mr-5 hover:text-gray-900" href='' to='lista'>Our staff</Link>
-    <Link className="mr-5 hover:text-gray-900" href='' to='/'>Shop</Link>
+    
       
     </nav>
-    <CartWidget></CartWidget>
+    <CartWidget/>
+    <ShoppingCart/>
   </div>
 
 </header>

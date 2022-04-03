@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getFirestore, collection, getDocs, query, where, getDoc, doc } from "firebase/firestore";
+import { getFirestore, collection, getDocs, query, where, getDoc, doc, addDoc, DocumentSnapshot } from "firebase/firestore";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -22,6 +22,7 @@ const firebaseConfig = {
 export const app = initializeApp(firebaseConfig);
  const db = getFirestore()
  const productsCollection = collection(db, "products")
+ const ordersCollection = collection(db, "orders")
 
 export const getProducts = async () => { 
 
@@ -69,8 +70,21 @@ export const getProductById = async (id) => {
 //   return 
 // }
 
+export const addOrder = async (order) => {
+    const docSnap =  await addDoc(ordersCollection, order)
+    return docSnap.id
+
+} 
+
 
 const analytics = getAnalytics(app);
 
 // export const getFirebase = () => {return app}
 
+// apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+// authDomain: process.env.REACT_APP_FIREBASE_AUTHDOMAIN,
+// projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+// storageBucket: process.env.REACT_APP_FIREBASE_STORAGEBUCKET,
+// messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGINGSENDERID,
+// appId: process.env.REACT_APP_FIREBASE_APPID,
+// measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENTID

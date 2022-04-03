@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Cards from '../components/Cards'
+import PlanesHome from '../components/rendercondicional/PlanesHome'
+import PlanesListContainer from '../components/rendercondicional/PlanesListContainer'
 import Item from './Item'
 import ItemDetailContainer from './ItemDetailContainer'
 import ItemList from './ItemList'
@@ -34,14 +36,16 @@ const ItemListContainer = ( ) => {
           <div className={titulo.titulo} >Our fleet</div>  
           <Cards></Cards>
           
-          <div className={estilos.nombre} style={{border: "solid red"}}>
-         <ItemList category={category}>
-         </ItemList>
+          {/* <div className={estilos.nombre} style={{border: "solid red"}}> */}
+         {/* <ItemList category={category}>
+         </ItemList> */}
          
-         <ItemDetailContainer></ItemDetailContainer>
+        
+         
+         
 
          
-          </div>
+          {/* </div> */}
 
 
 
