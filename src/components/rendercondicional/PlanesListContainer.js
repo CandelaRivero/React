@@ -25,7 +25,7 @@ const PlanesListContainer = () => {
   return (
 
     <>
-        <div>PlanesListContainer</div>
+      
         {productos.map((p) => <PlanesCard key={p.name} plane ={p} /> )}
 
     
